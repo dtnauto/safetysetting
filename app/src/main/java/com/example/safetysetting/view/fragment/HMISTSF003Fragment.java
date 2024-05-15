@@ -14,8 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.safetysetting.R;
+import com.example.safetysetting.vehicleappservice.SafetyInfo;
+import com.example.safetysetting.vehicleappservice.SafetyValueInfo;
+import com.example.safetysetting.view.base.AdapterSafety;
 import com.example.safetysetting.view.base.AdvanceAdapter;
 import com.example.safetysetting.view.base.AdvanceItem;
+import com.example.safetysetting.view.base.ItemSafety;
 
 import java.util.ArrayList;
 
@@ -33,6 +37,12 @@ public class HMISTSF003Fragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        SafetyInfo safetyInfo = new SafetyInfo();
+
+//        ItemSafety<SafetyValueInfo> safetyValueInfo = new ItemSafety<>(n);
+//        AdapterSafety<SafetyValueInfo> safetyValueInfoAdapterSafety = new AdapterSafety<>(new ItemSafety<>(safetyValueInfo));
+//
+//        boolean test = safetyValueInfoAdapterSafety.abc();
 
         RecyclerView recyclerView = view.findViewById(R.id.recycle_view);
 
